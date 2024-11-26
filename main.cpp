@@ -1,14 +1,11 @@
-#include <QCoreApplication>
 #include <iostream>
 #include <queue>
 
 #include "CommandMove.h"
 #include "CommandRotate.h"
 
-int main(int argc, char *argv[])
+int main()
 {
-    QCoreApplication a(argc, argv);
-
     std::queue<ICommand*> cmd;
     CommandMove *cmd_move = new CommandMove;
     cmd_move->getStr("1");
@@ -22,6 +19,4 @@ int main(int argc, char *argv[])
         cmd.pop();
     }
     std::cout << std::endl;
-
-    return a.exec();
 }
