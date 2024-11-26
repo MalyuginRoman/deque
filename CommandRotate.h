@@ -1,5 +1,4 @@
-#ifndef COMMANDROTATE_H
-#define COMMANDROTATE_H
+#pragma once
 #include "ICommand.h"
 #include <string>
 
@@ -7,10 +6,8 @@ class CommandRotate : public ICommand
 {
 public:
     CommandRotate();
-    void execute() /*override*/;
+    void execute();
     void getStr(std::string value);
 private:
     std::string str;
 };
-
-#endif // COMMANDROTATE_H
